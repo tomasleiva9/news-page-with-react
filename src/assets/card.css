@@ -1,0 +1,231 @@
+
+.post {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 300px;
+  padding-top: 110px;
+  padding-bottom: 50px;
+}
+.post .post-head {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  text-align: center;
+  font-size: 0.9em;
+  color: #a7abad;
+}
+.post .post-head .divisor {
+  background-color: #e9eaeb;
+  height: 1px;
+}
+.post .post-head span {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+.post .post-head strong {
+  font-weight: 600;
+  display: block;
+  text-align: center;
+  padding: 5px 0;
+}
+.post .post-title-section {
+  text-align: center;
+  min-height: 100px;
+}
+.post .post-title-section .post-title {
+  color: #676c6e;
+}
+.post .post-content-section {
+  -ms-flex: 1;
+      flex: 1;
+  text-align: center;
+  width: 100%;
+  line-height: 0;
+}
+.post .post-content-section .post-channels {
+  color: #9ca1a3;
+  font-weight: 400;
+  line-height: 1.4em;
+  vertical-align: middle;
+  font-size: 65%;
+  background-color: #f8f8f8;
+  border: 2px solid transparent;
+  border-radius: 0;
+  margin: 2px;
+  padding: 0 4px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.post .post-content-section .post-channels .post-channels-aval {
+  position: relative;
+  left: -6px;
+  padding: 0 3px;
+  background-color: #32cd32;
+}
+.post .post-content-section .post-channels.active {
+  background-color: #fff;
+  color: inherit;
+}
+.post .post-content-section .post-channels-icon {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  font-size: 10px;
+  color: #008ec8;
+  background: #fff;
+  margin: 0;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  padding: 0;
+}
+.post .post-actions {
+  position: absolute;
+  bottom: 20px;
+  width: 40px;
+  text-align: center;
+}
+.post .post-actions button {
+  transition-duration: 0s;
+  opacity: 0;
+  transform: translate3d(0, 40px, 0);
+  width: 30px;
+  height: 30px;
+  line-height: 1em;
+  border-radius: 50%;
+  background-color: transparent;
+  padding: 0;
+}
+.post .post-actions button:hover,
+.post .post-actions button.active {
+  cursor: pointer;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+.post .post-actions.left {
+  left: 15px;
+}
+.post .post-actions.right {
+  right: 0px;
+}
+.post * {
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 10;
+}
+.post::before {
+  position: absolute;
+  content: '';
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+.post.active .post-actions button.btn-check {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.post.active::before {
+  border: 2px solid transparent;
+}
+.post.active:hover {
+  outline: 1px solid transparent;
+}
+.post.active:hover .post-head,
+.post.active:hover .post-title,
+.post.active:hover .post-channels .post-channels-name {
+  color: initial;
+}
+.post:hover {
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+.post:hover .post-head strong,
+.post:hover .post-title,
+.post:hover .post-channels .post-channels-name {
+  color: initial;
+}
+.post:hover .post-actions button:nth-child(1) {
+  display: inherit;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition-delay: 50ms;
+  transition-duration: 0.3s;
+}
+.post:hover .post-actions button:nth-child(2) {
+  display: inherit;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition-delay: 100ms;
+  transition-duration: 0.3s;
+}
+.post:hover .post-actions button:nth-child(3) {
+  display: inherit;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition-delay: 150ms;
+  transition-duration: 0.3s;
+}
+.post:hover .post-actions button:nth-child(4) {
+  display: inherit;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition-delay: 200ms;
+  transition-duration: 0.3s;
+}
+.post:hover .post-actions button:nth-child(5) {
+  display: inherit;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition-delay: 250ms;
+  transition-duration: 0.3s;
+}
+.post:hover.active::before {
+  border-color: transparent !important;
+}
+.post:hover::before {
+  box-shadow: none;
+}
+/*
+ * Media Querys
+ */
+@media screen and (min-width: 576px) {
+.post {
+    width: 50%;
+}
+}
+@media screen and (min-width: 767px) {
+.post {
+    width: 100%;
+}
+}
+@media screen and (min-width: 881px) {
+.post {
+    width: 50%;
+}
+}
+@media screen and (min-width: 1200px) {
+.post {
+    width: 33.3%;
+}
+}
+@media screen and (min-width: 1500px) {
+.post {
+    width: 25%;
+}
+}
+@media screen and (min-width: 1800px) {
+.post {
+    width: 20%;
+}
+}
+@media screen and (min-width: 1921px) {
+.post {
+    width: 16.66%;
+}
+}
+@media screen and (min-width: 3000px) {
+.post {
+    width: 10%;
+}
+}
