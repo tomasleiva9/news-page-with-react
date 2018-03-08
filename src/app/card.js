@@ -12,7 +12,7 @@ class Card extends React.Component {
             <strong>{this.props.item.media}</strong>
             <span>{this.props.item.font}</span>
             <div className="divisor mx-4 my-2"></div>
-            <span className="post-date">Data</span>
+            <span className="post-date">{this.props.item.date.toDateString()}</span>
         </section>
 
         <section className="post-title-section p-2 d-flex justify-content-center align-items-center">

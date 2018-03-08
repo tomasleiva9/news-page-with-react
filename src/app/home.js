@@ -1,7 +1,6 @@
 import React from 'react';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux';
-import { fetchNews } from '../actions/index'
 
 import Card from './card.js';
 
@@ -31,8 +30,9 @@ function mapStateToProps(state) {
   }
 }
 
-function matchDispatchToProps(dispatch) {
-  return bindActionCreators({fetchNews}, dispatch)
-}
+// function matchDispatchToProps(dispatch) {
+//   return bindActionCreators({fetchNews}, dispatch)
+// }
 
-export default connect(mapStateToProps, matchDispatchToProps)(Home);
+// export default connect(mapStateToProps, matchDispatchToProps)(Home);
+export default connect(mapStateToProps)(Home);
