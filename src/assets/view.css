@@ -1,0 +1,13 @@
+.content {
+  max-width: 780px;
+  padding: 2em;
+  margin: auto;
+}
+
+.content h1 {
+  margin: 1em 0;
+}
+
+.content p {
+  font-size: 1.2em;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
 class Card extends React.Component {
   constructor (props) {
@@ -16,7 +17,7 @@ class Card extends React.Component {
         </section>
 
         <section className="post-title-section p-2 d-flex justify-content-center align-items-center">
-          <router-link className="post-title">{this.props.item.title}</router-link>
+          <NavLink to={`/${this.props.item.id}`} className="post-title">{this.props.item.title}</NavLink>
         </section>
 
         <section className="post-content-section px-2 d-flex flex-wrap justify-content-center align-content-center align-items-center">
